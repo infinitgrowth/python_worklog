@@ -2,10 +2,10 @@ from datetime import datetime
 from utils import Utils
 
 
+# the Task object that the class returns
 class Task:
     Utils().clear_screen()
 
-    # the Task object that the class returns
     def __init__(self):
         self.date = self.get_date()
         self.title = self.get_title()
@@ -28,8 +28,8 @@ class Task:
 
         return datetime.strftime(result, '%d/%m/%Y')
 
+    # gets the title of the task which be anything greater than 1
     def get_title(self):
-        # gets the title of the task which be anything greater than 1
 
         while True:
             title = input('''Title of the task:
@@ -47,8 +47,8 @@ class Task:
 
         return title
 
+    # Gets the integer time in minutes of the task
     def get_time_spent(self):
-        # Gets the integer time in minutes of the task
 
         while True:
             timesp = input('''How much time in minutes was spent on this task:
@@ -61,8 +61,8 @@ class Task:
             break
         return timesp
 
+    # Optional notes pertinent to the task so the user can enter nothing or anything
     def get_note(self):
-        # Optional notes pertinent to the task so the user can enter nothing or anything
 
         while True:
             note = input('''Additional notes for this task:
