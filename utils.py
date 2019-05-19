@@ -1,5 +1,6 @@
 import os
 import csv
+import pdb
 import re
 from datetime import datetime
 
@@ -193,6 +194,7 @@ Result {i + 1} of {size}
                 size = len(arr)
                 if size == 0:
                     break
+                i = 0
 
             # Return back to the previous menu
             elif response.lower() == 'r':
